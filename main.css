@@ -258,6 +258,10 @@ h1{
     /* rotateY() == left/right */
     font-family: 'Varela Round', 'Raleway', sans-serif;
     font-weight:bolder;
+    text-shadow:-1px 1px 0 #000,
+                        1px 1px 0 #000,
+                        1px -1px 0 #000,
+                        -1px -1px 0 #000;
     border:1rem;
     padding:1.5rem;
     font-size: 3rem;
@@ -274,18 +278,18 @@ color: #455a64;
 
 @media(min-width:768px){
     .quiz-question{
-        font-size:2vw;
+        font-size:1.5vw;
     }
     .quiz-options{
         text-align: center;
-        font-size:2vw;
+        font-size:1.5vw;
     }
     .z-text{
-        font-size:6vw;
-        padding:2vw;
+        font-size:4vw;
+        padding:1vw;
     }
     #check-answer{
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 }
 
@@ -294,17 +298,17 @@ color: #455a64;
         font-size: 0.5rem;
     }
     .quiz-score{
-        font-size:2vw;
+        font-size:1.5vw;
     }
     .quiz-question{
         font-size:2vw;
     }
     .quiz-options{
-        font-size:1.5vw;
+        font-size:2vw;
     }
     .z-text{
-        font-size:4vw;
-        padding:2vw;
+        font-size:3vw;
+        padding:1vw;
     }
     button span {
         display: none !important;

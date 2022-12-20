@@ -272,18 +272,38 @@ h1{
 color: #455a64;
 }
 
-@media(max-width: 678px){
-    body{
-        font-size: 0.8rem;
-    }
-    .quiz-score{
-        font-size:2vh;
+@media(min-width:768px){
+    .quiz-question{
+        font-size:2vw;
     }
     .quiz-options{
-        font-size:0.8rem;
+        text-align: center;
+        font-size:2vw;
     }
     .z-text{
+        font-size:6vw;
+        padding:2vw;
+    }
+    #check-answer{
+        font-size: 2vw;
+    }
+}
+
+@media(max-width: 678px){
+    body{
+        font-size: 0.5rem;
+    }
+    .quiz-score{
         font-size:2vw;
+    }
+    .quiz-question{
+        font-size:2vw;
+    }
+    .quiz-options{
+        font-size:1.5vw;
+    }
+    .z-text{
+        font-size:4vw;
         padding:2vw;
     }
     button span {
@@ -291,8 +311,9 @@ color: #455a64;
     }
     button{
         padding:10px !important;
+        margin:10px;
     }
     .quiz-foot button{
-        font-size: 0.8rem;
+        font-size: 0.5rem;
     }
 }

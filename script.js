@@ -185,6 +185,11 @@ function pauseAudio() {
     _bgMusic.currentTime = 0;
 } 
 
+let volume = document.getElementById('volume-slider');
+volume.addEventListener("change", function(e) {
+    _bgMusic.volume = e.currentTarget.value / 100;
+})
+
 function clickSound(value){
     if (value === 0) {
         _clickSound.play();
@@ -216,3 +221,32 @@ function restartQuiz(){
     setCount();
     loadQuestion();
 }
+
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+.add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 6000,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+}).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeInOutSine",
+    direction: 'alternate',
+    delay: 1000,
+    delay: anime.stagger(100, {from: 'center'})
+});
+
+var ztxt = new Ztextify(".hero-text", {
+    depth: "30px",
+    layers: 20,
+    fade: true,
+    direction: "forwards",
+    event: "pointer",
+    eventRotation: "35deg"
+ });
